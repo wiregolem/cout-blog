@@ -1,0 +1,153 @@
+body{
+  font-family: Helvetica;
+  background-color:#eeeeee;
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  background-color:#1e1e1e;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left:0px;
+  width: 100%;
+  padding-left: 1em;
+  box-shadow: 0em .01em .01em  0em #1e1e1e; 
+}
+
+h4,h2,h6{
+  margin:0;
+}
+
+h4{
+  margin-bottom:1em;
+}
+
+.content{
+ padding-top: 2em;
+ color: #000000;
+}
+
+code{
+  font-family: monospace;
+  font-size: 1.25em;
+  background-color:#eeeeee;
+}
+
+.excerpt {
+  border:0px solid white;
+  border-radius: 1em;
+  background-color:#ffffff;
+  padding:2em;
+  width: 27em;
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 600px;
+  margin-bottom: 2em;
+  box-shadow: 1em 1em 1em 0em #999999;
+}
+
+footer{
+  background-color:#1e1e1e;
+  margin-left:none;
+  color:#ffffff;
+  font-size:.75em;
+}
+
+a:link{
+  text-decoration:none;
+  color:#2B91AF;
+}
+a:visited{
+  color:#2B91AF;
+}
+a.contbutton{
+  background-color:#CCCCCC; 
+  color:#000000;
+  padding:.5em;
+  border-radius: .5em;
+}
+
+a.contbutton:hover{
+  background-color:#8C75D4;
+  
+}
+
+.continue{
+  padding: .5em;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+hr{
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.mediaIcon {
+  width: 20px;
+  padding: .125em;
+}
+
+.footFlex{
+  display: flex;
+  flex-direction:row;
+  align-items: flex-end;
+  justify-content: center;
+  text-align:center;
+}
+
+.footLeft{
+  padding: 1em;
+  flex:30%;
+}
+
+.footMiddle{
+  padding: 1em;
+  flex: 30%;
+}
+
+.footRight{
+  padding:1em;
+  flex:30%;
+}
+
+.badge{
+  width: 30px;
+  padding: .124em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+@media (max-width: 800px) {
+ 
+   footer{
+    font-size: 1em;
+  }
+
+  .footFlex {
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font
+  } 
+
+  .excerpt {
+    border:0px solid white;
+    border-radius: 1em;
+    background-color:#ffffff;
+    padding:2em;
+    min-width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 80%;
+    margin-bottom: 2em;
+    box-shadow: 1em 1em 1em 0em #999999;
+  }
+}
+
