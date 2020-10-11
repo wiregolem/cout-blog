@@ -123,6 +123,12 @@ hr{
   margin-right:auto;
 }
 
+.license{
+text-align:center;
+padding-bottom: 1em;
+margin: none;
+}
+
 
 @media (max-width: 800px) {
  
