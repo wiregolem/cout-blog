@@ -93,6 +93,24 @@ hr{
   padding: .125em;
 }
 
+
+.flex404{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  padding-bottom:2em;
+}
+
+.msg404{
+  padding: 1em;
+  width: 18em;
+  max-width:600px;
+}
+
+.img404{
+  align-self:center;
+}
+
 .footFlex{
   display: flex;
   flex-direction:row;
@@ -130,8 +148,15 @@ margin: none;
 }
 
 
+
+
 @media (max-width: 800px) {
- 
+  .flex404{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+    
    footer{
     font-size: 1em;
   }
@@ -140,7 +165,6 @@ margin: none;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    font
   } 
 
   .excerpt {
@@ -156,4 +180,7 @@ margin: none;
     box-shadow: 1em 1em 1em 0em #999999;
   }
 }
+
+
+
 
