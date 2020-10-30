@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cout Blog</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+    <h1> <span style="color:#4EC9B0;">std</span>::<span style="color:#2B91AF;">cout</span><span style="color:#ddccaa;"> <<</span> </h1>
+    </div>
+    <h1> std::cout << </h1>
+    <!-- End of Header -->    
+
+    <!-- Content -->
+    <div class="content">
+
+      <!-- Article Excerpt -->
+      <div class="excerpt">
+        <!-- Title -->
+	<h1>Using gh</h1>
+        <!-- Subtitle -->
+        <h4>GitHub's new command line interface</h4>
+        <!-- Icon -->
+        <!-- Tags -->
+        <h6>Command line tools</h6>
+        <!-- Excerpt -->
+        <p>The GitHub CLI, invoked with $ gh is the offical a command line interface of the popular code repository website, GitHub, making it possible to create repositories and even search available issues without a web browser! Before the release of the offical CLI many avid coders used the open-source, community developed, hub command. As the syntax is similar, switching to gh for those already familiar with the hub command should be simple. This article, however, assumes no such familiarity. Let's address the basics: Installation, authenticating, configuration, and creating a remote repository. 
+        </p>
+
+        <ol>
+          <a href="#installation"><li>Installation</li></a>
+          <ul>
+            <a href="#linux"><li>Linux</li></a>
+            <ul>
+              <a href="#build"><li>Build from source</li></a>
+              <a href="#debian"><li>Debian/Ubuntu</li></a>
+              <a href="#fedora"><li>Fedora/CentOS/Redhat</li></a>
+              <a href="#suse"><li>SUSE/openSUSE</li></a>
+              <a href="#arch"><li>Arch</li></a>
+              <a href="#android"><li>Android</li></a>
+              <a href="#kiss"><li>Kiss Linux</li></a>
+              <a href="#nix"><li>Nix</li></a>
+            </ul>
+            <a href="#windows"><li>Windows</li></a>
+            <a href="#mac"><li>Macintosh</li></a>
+          </ul>
+          <a href="#auth"><li>Authenticating</li></a>
+            <ul>
+              <a href="#login"><li>Logging in</li></a>
+              <a href="#token"><li>Logging in with a token</li></a>
+              <a href="#logout"><li>Logging out</li></a>
+            </ul>
+          <a href="#alias"><li>Using aliases</li></a>
+          <a href="#config"><li>Configuration</li></a>
+          <a href="#repo"><li>Creating a remote repository</li></a>
+        </ol>
+
+        <h1 id="installation"> Installation</h1>
+        <br>
+          <h2 id="linux"> Linux </h2>
+            <h3 id="build"> Building from source </h3>
+
+              <p>While there are often easier methodologies for installing software on your machine there will always be niche circumstances which require or (enthusiasts which desire) to do things "the Unix way". To build GitHub's command line tool you're going to need a golang compiler.</p>
+              <p>First, let's check if you already have go installed, gh requires version 1.13 or higher</p>
+              <blockquote>
+                <code> $ go version </code>
+              </blockquote>
+              <p>If you don't already have go installed, the installation instructions can be found here at <a href="https://golang.org/doc/install">https://golang.org/doc/install</a> Once that's sorted out:</p>
+              <b>Clone the official repository for gh</b>
+              <blockquote>
+                <code> $ git clone https://github.com/cli/cli.git gh-cli </code>
+                <code> $ cd gh-cli </code>
+              </blockquote>
+              <b> Build with make </b>
+              <blockquote>
+                <code> $ make </code>
+              </blockquote>
+              <b>Finally, move the bin/gh executable to your PATH</b>
+              <p>to enable simple calling of the executable name and not it's complete address in your filesystem</p>
+              <blockquote>
+                <code> $ sudo mv ./bin/gh /usr/local/bin </code>
+              </blockquote>
+              <p>Let's verify our success with:</p>
+              <blockquote>
+                <code> $ gh version </code>
+              </blockquote>
+
+            <h3 id="debian"> Debian/Ubuntu </h3>
+              <b>Step 1: Key exchange</b>
+              <blockquote>
+                <code>$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0</code>
+              </blockquote>
+              <p>Or if behind a firewall:</p>
+              <blockquote>
+                <code>$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key C99B11DEB97541F0</code>
+              </blockquote>
+              <p>If you don't have the dirmngr package installed, you may recieve the error gpg: failed to start the dirmngr'/usr/bin/dirmngr/': No such file of directory To remedy this simply install the missing package and repeat step 1</p>
+              <blockquote>
+                <code>$ sudo apt install dirmngr</code>
+              </blockquote>
+              <b>Step 2: Add the repository</b>
+              <blockquote>
+                <code>$ sudo apt-add-repository https://cli.github.com/packages</code>
+              </blockquote>
+              <p>If you don't have apt-add-repository your package manager should provide it readily, before repeating step 2, run:</p>
+              <blockquote>
+                <code>$ sudo apt install software-properties-common</code>
+              </blockquote>
+              <b>Step 3: Update the repository and install</b>
+              <blockquote>
+                <code>$ sudo apt update</code><br>
+                <code>$ sudo apt install gh</code>
+              </blockquote>
+
+            <h3 id="fedora">Fedora CentOS and Red Hat</h3>
+              <blockquote>
+                <code>$ sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo</code><br>
+                <code>$ sudo dnf install gh</code>
+              </blockquote>
+
+            <h3 id="suse">SUSE/openSUSE</h3>
+              <blockquote>
+                <code>$ sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo</code><br>
+                <code>$ sudo zypper ref</code><br>
+                <code>$ sudo zypper install gh</code>
+              </blockquote>
+            
+            <p>There are community repositories not officially supported by Github for:</p>
+
+            <h3 id="arch">Arch Linux</h3>
+              <blockquote>
+                <code>$ sudo pacman -S github-cli</code>
+              </blockquote>
+
+            <h3 id="android">Android, using Termux </h3>
+              <blockquote>
+                <code>$ pkg install gh</code>
+              </blockquote>
+
+            <h3 id="kiss">Kiss Linux</h3>
+              <blockquote>
+                <code>$ kiss b github-cli</code><br>
+                <code>$ kiss i github-cli</code><br>
+              </blockquote>
+
+            <h3 id="nix">Nix</h3>
+              <blockquote>
+              <code>$ nix-env -iA nicos.gitAndTools.gh</code>
+            </blockquote>
+
+          <h2 id="windows">Microsoft Windows</h2>
+            <p>Git hub provides a signed MSI installer for 64bit Windows</p>
+            <a href="https://github.com/cli/cli/releases/download/v1.2.0/gh_1.2.0_windows_amd64.msi">https://github.com/cli/cli/releases/download/v1.2.0/gh_1.2.0_windows_amd64.msi</a>
+            <p>At time of writing, the latest version is 1.2.0 to find the latest release go to<p>
+            <a href="https://github.com/cli/cli/releases/latest">https://github.com/cli/cli/releases/latest</a>
+
+          <h2 id="mac">Macintosh</h2>
+            <p>gh for MacOS can be installed via Homebrew</p>
+            <blockquote>
+              <code>brew install gh</code><br>
+            </blockquote>
+            <p>or via MacPorts</p>
+            <blockquote>
+              <code>sudo port install gh</code>
+            </blockquote>
+
+
+        <h1 id="auth">Authenticating</h1>
+        <br>
+        
+          <h2 id="login">Logging In</h2>
+            <p> In order to make use of the github command line tool you'll need to login to your github account (sadly we can not make a github account using gh-cli, if you don't have one, go to https://github.com/join) logging in is very easy,</p>
+            <blockquote>
+              <code>$ gh auth login</code>
+            </blockquote>
+            <p>in the terminal, opens the interactive login prompt. From there you can use arrow keys to select either GitHub.com or GitHub Enterprise server and press enter to confirm your selection.</p>
+            <em>If you choose GitHub Enterprise server you'll simply be prompted with the extra step of entering a GHE hostname</em>
+            <p>Next, Log in with a web browser or paste an authentication token When you choose to log in with a web-browser a one time 8 digit code will appear in your terminal, copy that and proceed, as prompted, to open your web-browser.</p>
+            <img src="using-gh-images/login.png" alt="Account login prompt screenshot" style="max-width: 100%;">
+            <p>The terminal will open your system's default for you and navigate to the page. Assuming that you're allready logged in to github in your browser, you'll be presented with a page to enter the one time code that we've copied. Type it in or paste it now to continue.</p> 
+            <img src="using-gh-images/enter-token.png" alt="Enter token on github in browser screenshot" style="max-width: 100%;">
+            <p>If you've entered the right code you'll be asked if you'd like this device to have permission to access your account, confirm this, enter your password, and be congratulated! Your device is now connected.</p>
+            <img src="using-gh-images/authorize.png" alt="Authorize gh access to github account" style="max-width: 300px;">
+            <img src="using-gh-images/password.png" alt="Enter password on github" style="max-width: 300px;">
+            <img src="using-gh-images/congratulations.png" alt="Congratulations screenshot" style="max-width: 300px;">
+            <p>Feel free to close the browser and let's turn our attention back to the terminal. It should now display "Authentication complete. Press Enter to continue..."</p>
+            <p>You'll be asked to configure your default git protocol, HTTPS or SSH. You can change this later, I've simply chosen HTTPS. The interactive process even displays the command that it uses to accomplish this.</p>
+            <img src="using-gh-images/loggedin.png" alt="Logged in to gh on terminal">
+
+          <h2 id="token">Logging In With A Token</h2>
+            <p>Git hub makes it really easy to create an access token. Unfortunately we have to open a web browser again head to:</p> 
+            <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
+            <p>and select Generate a personal access token, or just click on this:</p> 
+            <a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a>
+            <p>When generating a personal access token, you'll need to select some permissions, what will the login that uses this token be allowed to do through the github cli? GitHub calls these permissions "scopes". The minimum required scopes are "repo" Which grants full control of private repositories, and "read:org" read organization and team membership, as well as read organization projects. Choose the amount of permission at your own discression and excersize caution when making this selection. I'll personally be throwing caution to the wind and giving full control to the api by checking off everything in bold.  You can leave a note at the top, as this access token may be one of many saved on your github account. Your future self will appreciate a self-descriptive note, but feel free to make something up.</p>
+            <p>When you've written your descriptive note and made your selection of scopes, choosing at minimum "repo" and "read:org" select generate token. Copy the token to the clipboard. There are two neat things we can do with it. We can either, paste it in the terminal durring the interactive login when choosing "Paste an authentication token" OR we can <b>save it in a text file!</b></p>
+            <p>Open your favorite text editor, I use nano from the terminal for ease of use and lack of vim skills, but use what ever you'd like, paste in your authentication token and save the file with whichever name you like.</p> 
+            <em>okay here's the fun part</em>
+            <p>now we can log in with the token file we've just created!</p>
+            <blockquote>
+              <code>$ gh auth login --with-token < mytoken.txt</code>
+            </blockquote>
+            <p>where mytoken.txt is the path and name of whatever you may have named the file containing your token press enter and ....</p>
+            <em>Nothing appears to happen.</em>
+            <p>EXCELLENT! We have successfully logged in with a token! Don't worry, it only barks if an error occurs.</p>
+            <p>You can confirm this by trying to log out and seeing your username displayed in the prompt(and pressing n when prompted to stay logged in)</p>
+
+          <h2 id="logout">Logging out</h2>
+            <p>This couldn't be simpler! (unless you didn't have to type auth)</p>
+            <blockquote>
+              <code>gh auth logout</code>
+            </blockquote>
+            <p>Your intentions will be questioned by a prompt which will display your username, press Y to logout or n to stay logged in.</p>
+            <em>... can it be simpler?</em>
+            <p>YES! With aliases we can create whatever command we'd like</p>
+        <h1 id="alias">Using aliases to create custom commands</h1>
+          <p>Aliases are a powerful feature of gh. I say they're powerful because we're lazy. They allow us to create customized short-form commands from complex expressions. This saves us fractions of a second everytime we need to get something done. After thirty or so years of typing away at the keyboard, we'll have saved enough time to slack off for few more minutes. Every moment is precious! Let's start with shaving off some of the logout command, three words is too many.</p>
+          <blockquote>
+            <code>$ gh alias set logout 'auth logout'</code></br>
+            <code>- Adding alias for logout: auth logout</code><br>
+            <code>- Added alias.</code>
+          </blockquote>
+          <p>Now try</p>
+          <blockquote>
+            <code>$ gh logout</code>
+          </blockquote>
+          <em>SUCCESS!</em>
+          <p>You can be an over achiever and create "gh bye" or "gh lo" whatever you'd like, but the point is we can use aliases to create shortcuts for any commands we'd like and the syntax is simple</p>
+          <blockquote>
+            <code>$ gh alias set OurNewCommand 'the complex expression we'd like to set an alias for not including gh itself'</code>
+          </blockquote>
+          <p>and yes, the single quotes are important. For more info try typing this into the terminal</p>
+          <blockquote>
+            <code>$ gh help set alias</code>
+          </blockquote>
+
+        <h1 id="config">Configuration</h1>
+          <p>We can configure a number of things. Remember earlier when we logged in and set our protocol to https via the interactive prompt? We can change that whenever we like with the command:</p>
+          <blockquote>
+            <code>$ gh config set git_protocol ssh</code><br>
+            or<br>
+            <code>$ gh config set git_protocol https</code>
+          </blockquote>
+          <p>How to use SSH to connect to github is outside of the scope of this tutorial, but github docs to a great job here:</p>
+          <a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh<a>
+          <p>You can even configure the default editor that gh will open If you choose not to, gh will first try the values of your terminals environment variables in this order:</p>
+          <blockquote>
+            <code>GIT_EDITOR</code><br>
+            <code>VISUAL</code><br>
+            <code>EDITOR</code>
+          </blockquote>
+          <p>However, you can bypass all of these by simply using the command:</p>
+          <blockquote>
+            <code>$ gh config set editor vim</code>
+          </blockquote>
+          <p>Replace vim with nano or kate or geany et cetera, which ever editor you prefer.</p> 
+          <p>At time of writing you may configure the following elements:</p>
+          <blockquote>
+            <code>git_protocol: the protocol for git clone and push operations [https or ssh]</code><br>
+            <code>editor: the text editor to open when needed </code><br>
+            <code>prompt: a toggle of the interactive prompts [enabled or disabled]</code><br>
+            <code>pager: the terminal pager program to send standard output to</code>
+          </blockquote>
+          <p>To set any element to the value of your choosing, type:</p>
+          <blockquote>
+            <code>$ gh config set ELEMENT VALUE</code>
+          </blockquote>
+          <p>Similarly to retrieve the current set value for any of the above elements, type:</p>
+          <blockquote>
+            <code>$ gh config get ELEMENT</code>
+          </blockquote>
+          <p>If nothing displays then nothing has been set by the user</p>
+
+        <h1 id="repo">Creating a remote repository</h1>
+          <p>Okay so now you've installed gh, you've logged in to your GitHub account or your enterprise server, you've configured it, maybe you've even set up an alias or two. Great. What else is there to do?</p>
+          <em>Let's actually use gh.</em> 
+          <p>The reason we've installed gh in the firstplace is because it can do the things that git can't do. it can't interact with, manage, nor create pull requests, it can't work with gists, and most importantly, GIT CAN'T CREATE OR FORK A REPOSITORY ON YOUR ACCOUNT</p>
+          <p>So let's do that one.</p>
+          <blockquote>
+            <code>$ gh repo create</code>
+          </blockquote>
+          <p>That's it. But what did that do?</p>
+          <p>Well, with no arguments, assuming you're in a git initialized directory (ie - "git init"), gh's repo create command creates a repository on your github account with the same name as the current working repository directory</p>
+          <p>For instance:</p>
+          <blockquote>
+            <code>$ mkdir my-project</code><br>
+            <code>$ cd my-project</code><br>
+            <code>$ git init</code></br>
+            <code>$ gh repo create</code><br>
+          </blockquote>
+          <ul>
+            <li>Makes a directory called my-project if one doesn't allready exist</li>
+            <li>Changes your current working directory to the new one you've just created</li>
+            <li>Initializes a local git repository in our current directory</li>
+            <li>and Creates a git repository at user/my-project on GitHub</li> 
+          </ul>
+          <p>In fact, the output looks like this</p>
+          <blockquote>
+            <code>✓ Created repository user/my-project on GitHub</code><br>
+            <code>✓ Added remote https://github.com/user/my-project.git</code><br>
+          </blockquote>
+          <p>That's it you've created a repository!</p>
+          <p>The gh repo create command can also optionally take as an argument a name for the new remote repository ignoring the current working directory name.</p>
+          <blockquote>
+            <code>$ gh repo create my-new-repo-name</code>
+          </blockquote>
+          <p>or if you are part of an organization on GitHub</p>
+          <blockquote>
+             <code>$ gh repo create organization-name/my-new-repo-name</code>
+          </blockquote>
+          <p>will create a repo called "my-new-repo-name" for the organization "organization-name"</p>
+          <p>Optionally there are a number of flags you can set, the following comes from the output of the "gh repo create --help" command</p>
+          <blockquote>
+            <code>  -y, --confirm              Confirm the submission directly</code><br>
+            <code>  -d, --description string   Description of repository</code><br>
+            <code>  &nbsp;&nbsp;&nbsp;&nbsp;--enable-issues        Enable issues in the new repository (default true)</code><br>
+            <code>  &nbsp;&nbsp;&nbsp;&nbsp;--enable-wiki          Enable wiki in the new repository (default true)</code><br>
+            <code>  -h, --homepage string      Repository home page URL</code><br>
+            <code>  &nbsp;&nbsp;&nbsp;&nbsp;--internal             Make the new repository internal</code><br>
+            <code>  &nbsp;&nbsp;&nbsp;&nbsp;--private              Make the new repository private</code><br>
+            <code>  &nbsp;&nbsp;&nbsp;&nbsp;--public               Make the new repository public</code><br>
+            <code>  -t, --team string          The name of the organization team to be granted access</code><br>
+            <code>  -p, --template string      Make the new repository based on a template repository</code><br>
+          </blockquote>
+          <p>For example,</p>
+          <blockquote>
+            <code>$ gh repo create org-name/my-repo -d 'An example repository' --enable-issues=false</code><br>
+          </blockquote>
+          <p>will create a repo called my-repo for the org-name organization with the description "An example repository" with issues disabled.</p>
+          <p>To view a repository simple use:</p>
+          <blockquote>
+            <code>$ gh repo view owner/repo</code> 
+          </blockquote>
+          <p>By default this command will open display repository's main(or master) branch in the terminal This can be changed with the --web or -w flag, to open the repository in a web browser and/or the --branch or -b flag, followed the the branch name to open a specific branch.</p>
+          <p>Without any arguments, the command,</p>
+          <blockquote>
+            <code>$ gh repo view</code>
+          </blockquote>
+          <p>will display the repository of your current git-initialized working directory.</p>
+          <p>There is so much more that gh can do. You can fork and clone repos, manage pull requests, handle issues, manage releases, work with gists, and make authenticated GitHub API requests. These commands are beyond the scope of this elementary tutorial. However, information regarding that functionality can be found in the official GitHub cli manual at <a href="https://cli.github.com/manual/gh_api">https://cli.github.com/manual/gh_api</a></p>
+          <p>You've learned how to get setup and start using GitHub's new command line tool! Now you never need to leave your terminal, as the good lord intended. If you've like what you've read sign up to the std::cout << mailing list or subscribe to the rss feed to for updates on new articles the moment they arrive. If you've found what you've read to be invaluable and would like to recieve more content like this subscribe to my patreon or pour me a cup of tea.</p>
+        
+        <!-- Article Footnote -->
+        <input type="text" placeholder="youremail@ddress.com">
+        <button>Sign up</button>
+        <br><br>
+        <button>Pour some tea</button><br>
+        <a href="#"><img src="images/patreon.svg" width="50px"><a>
+        <p>Thank you for reading!</p>
+        <p>EOF</p>
+        <!-- End of Article Footnote -->
+
+      </div>
+      <!-- End of Article Excerpt -->
+      
+
+    </div>
+    <!-- End of Content -->
+    
+    </body>
+    <!-- End of Body -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footFlex">
+        
+        <div class="footRight">
+          This website was made on Bash</br>
+          with the Gnu-nano  text editor</br> 
+          on  Debian Buster Linux.</br>
+          <hr>
+          <a href="https://www.gnu.org/software/bash/"><img src="images/bash-dark.svg" alt="Bash" class="badge"></a>
+          <a href="https://www.nano-editor.org/"><img src="images/nano.png" alt="Nano" class="badge"></a>
+          <a href="https://www.debian.org/"><img src="images/debian.svg" alt="Debian" class="badge"></a>
+        </div>
+        
+        <div class="footMiddle">
+          Cout is a blog by Kevin Friedl, </br>
+          a professional software engineer,</br>
+          specializing in the c++ language.</br>
+          If you like what you've read
+          or found it useful</br>
+          and would like to support Cout </br>
+          <a href="#">You can buy me a cup of tea</a> </br>
+          Or subscribe to my <a href="https://www.patreon.com/kevinmfriedl">Patreon<img src="images/patreon.svg" width="10px"></a> </br>
+          <b>Thanks!</b>
+        </div>
+
+        <div class="footLeft">
+          Connect, Contact, Collaborate
+          <hr>
+          <a href="https://www.linkedin.com/in/kevin-m-friedl"><img src="images/linkedin.svg" alt="LinkedIn" class="mediaIcon"></a>
+          <a href="https://github.com/wiregolem"><img src="images/github.svg" alt="GitHub" class="mediaIcon"></a>
+          <a href="https://twitter.com/KevinMFriedl"><img src="images/twitter.svg" alt="Twitter" class="mediaIcon"></a>
+          <a href="#"><img src="images/rss.svg" alt="Rss" class="mediaIcon"></a>
+          <a href="mailto: kevin@cout.blog"><img src="images/mail.svg" alt="Email" class="mediaIcon"></a>
+        </div>
+
+      </div>
+      
+      <!-- Copyleft -->
+      <hr>
+      <div class="license" xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text">
+      <a rel="cc:attributionURL" property="dct:title" href="http:www.cout.blog">The cout website</a>
+      by 
+      <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="www.cout.blog">Kevin M. Friedl</a> 
+      is licensed under 
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a></span>
+      <!-- End of Copyleft -->
+
+    </footer>
+    <!-- End of Footer -->
+
+</html>
