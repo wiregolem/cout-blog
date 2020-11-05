@@ -14,7 +14,6 @@
     <div class="header">
     <h1> <span style="color:#4EC9B0;">std</span>::<span style="color:#2B91AF;">cout</span><span style="color:#ddccaa;"> <<</span> </h1>
     </div>
-    <h1> std::cout << </h1>
     <!-- End of Header -->    
 
     <!-- Content -->
@@ -61,10 +60,13 @@
           <a href="#repo"><li>Creating a remote repository</li></a>
         </ol>
 
-        <h1 id="installation"> Installation</h1>
+        <div class="spacer" id="installation"><h1>&nbsp;</h1></div>
+        <h1> Installation</h1>
         <br>
-          <h2 id="linux"> Linux </h2>
-            <h3 id="build"> Building from source </h3>
+          <div class="spacer" id="linux"><h1>&nbsp;</h1></div>
+          <h2> Linux </h2>
+            <div class="spacer" id="build"><h1>&nbsp;</h1></div>
+            <h3> Building from source </h3>
 
               <p>While there are often easier methodologies for installing software on your machine there will always be niche circumstances which require or (enthusiasts which desire) to do things "the Unix way". To build GitHub's command line tool you're going to need a golang compiler.</p>
               <p>First, let's check if you already have go installed, gh requires version 1.13 or higher</p>
@@ -90,8 +92,8 @@
               <blockquote>
                 <code> $ gh version </code>
               </blockquote>
-
-            <h3 id="debian"> Debian/Ubuntu </h3>
+            <div class="spacer" id="debian"><h1>&nbsp;</h1></div>
+            <h3> Debian/Ubuntu </h3>
               <b>Step 1: Key exchange</b>
               <blockquote>
                 <code>$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0</code>
@@ -117,14 +119,16 @@
                 <code>$ sudo apt update</code><br>
                 <code>$ sudo apt install gh</code>
               </blockquote>
-
-            <h3 id="fedora">Fedora CentOS and Red Hat</h3>
+              
+            <div class="spacer" id="fedora"><h1>&nbsp;</h1></div>
+            <h3>Fedora CentOS and Red Hat</h3>
               <blockquote>
                 <code>$ sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo</code><br>
                 <code>$ sudo dnf install gh</code>
               </blockquote>
-
-            <h3 id="suse">SUSE/openSUSE</h3>
+              
+            <div class="spacer" id="suse"><h1>&nbsp;</h1></div>
+            <h3>SUSE/openSUSE</h3>
               <blockquote>
                 <code>$ sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo</code><br>
                 <code>$ sudo zypper ref</code><br>
@@ -132,35 +136,41 @@
               </blockquote>
             
             <p>There are community repositories not officially supported by Github for:</p>
-
-            <h3 id="arch">Arch Linux</h3>
+            
+            <div class="spacer" id="arch"><h1>&nbsp;</h1></div>
+            <h3>Arch Linux</h3>
               <blockquote>
                 <code>$ sudo pacman -S github-cli</code>
               </blockquote>
 
-            <h3 id="android">Android, using Termux </h3>
+            <div class="spacer" id="android"><h1>&nbsp;</h1></div>  
+            <h3>Android, using Termux </h3>
               <blockquote>
                 <code>$ pkg install gh</code>
               </blockquote>
 
-            <h3 id="kiss">Kiss Linux</h3>
+            <div class="spacer" id="kiss"><h1>&nbsp;</h1></div>  
+            <h3>Kiss Linux</h3>
               <blockquote>
                 <code>$ kiss b github-cli</code><br>
                 <code>$ kiss i github-cli</code><br>
               </blockquote>
 
-            <h3 id="nix">Nix</h3>
+            <div class="spacer" id="nix"><h1>&nbsp;</h1></div>  
+            <h3>Nix</h3>
               <blockquote>
               <code>$ nix-env -iA nicos.gitAndTools.gh</code>
             </blockquote>
 
-          <h2 id="windows">Microsoft Windows</h2>
+          <div class="spacer" id="windows"><h1>&nbsp;</h1></div>  
+          <h2>Microsoft Windows</h2>
             <p>Git hub provides a signed MSI installer for 64bit Windows</p>
             <a href="https://github.com/cli/cli/releases/download/v1.2.0/gh_1.2.0_windows_amd64.msi">https://github.com/cli/cli/releases/download/v1.2.0/gh_1.2.0_windows_amd64.msi</a>
             <p>At time of writing, the latest version is 1.2.0 to find the latest release go to<p>
             <a href="https://github.com/cli/cli/releases/latest">https://github.com/cli/cli/releases/latest</a>
 
-          <h2 id="mac">Macintosh</h2>
+          <div class="spacer" id="mac"><h1>&nbsp;</h1></div>
+          <h2>Macintosh</h2>
             <p>gh for MacOS can be installed via Homebrew</p>
             <blockquote>
               <code>brew install gh</code><br>
@@ -170,11 +180,12 @@
               <code>sudo port install gh</code>
             </blockquote>
 
-
-        <h1 id="auth">Authenticating</h1>
+        <div class="spacer" id="auth"><h1>&nbsp;</h1></div>
+        <h1>Authenticating</h1>
         <br>
         
-          <h2 id="login">Logging In</h2>
+          <div class="spacer" id="login"><h1>&nbsp;</h1></div>
+          <h2>Logging In</h2>
             <p> In order to make use of the github command line tool you'll need to login to your github account (sadly we can not make a github account using gh-cli, if you don't have one, go to https://github.com/join) logging in is very easy,</p>
             <blockquote>
               <code>$ gh auth login</code>
@@ -193,7 +204,8 @@
             <p>You'll be asked to configure your default git protocol, HTTPS or SSH. You can change this later, I've simply chosen HTTPS. The interactive process even displays the command that it uses to accomplish this.</p>
             <img src="using-gh-images/loggedin.png" alt="Logged in to gh on terminal">
 
-          <h2 id="token">Logging In With A Token</h2>
+          <div class="spacer" id="token"><h1>&nbsp;</h1></div>  
+          <h2>Logging In With A Token</h2>
             <p>Git hub makes it really easy to create an access token. Unfortunately we have to open a web browser again head to:</p> 
             <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
             <p>and select Generate a personal access token, or just click on this:</p> 
@@ -211,7 +223,8 @@
             <p>EXCELLENT! We have successfully logged in with a token! Don't worry, it only barks if an error occurs.</p>
             <p>You can confirm this by trying to log out and seeing your username displayed in the prompt(and pressing n when prompted to stay logged in)</p>
 
-          <h2 id="logout">Logging out</h2>
+          <div class="spacer" id="logout"><h1>&nbsp;</h1></div>  
+          <h2>Logging out</h2>
             <p>This couldn't be simpler! (unless you didn't have to type auth)</p>
             <blockquote>
               <code>gh auth logout</code>
@@ -219,7 +232,9 @@
             <p>Your intentions will be questioned by a prompt which will display your username, press Y to logout or n to stay logged in.</p>
             <em>... can it be simpler?</em>
             <p>YES! With aliases we can create whatever command we'd like</p>
-        <h1 id="alias">Using aliases to create custom commands</h1>
+        
+        <div class="spacer" id="alias"><h1>&nbsp;</h1></div>
+        <h1>Using aliases to create custom commands</h1>
           <p>Aliases are a powerful feature of gh. I say they're powerful because we're lazy. They allow us to create customized short-form commands from complex expressions. This saves us fractions of a second everytime we need to get something done. After thirty or so years of typing away at the keyboard, we'll have saved enough time to slack off for few more minutes. Every moment is precious! Let's start with shaving off some of the logout command, three words is too many.</p>
           <blockquote>
             <code>$ gh alias set logout 'auth logout'</code></br>
@@ -240,7 +255,8 @@
             <code>$ gh help set alias</code>
           </blockquote>
 
-        <h1 id="config">Configuration</h1>
+        <div class="spacer" id="config"><h1>&nbsp;</h1></div>  
+        <h1>Configuration</h1>
           <p>We can configure a number of things. Remember earlier when we logged in and set our protocol to https via the interactive prompt? We can change that whenever we like with the command:</p>
           <blockquote>
             <code>$ gh config set git_protocol ssh</code><br>
@@ -277,7 +293,8 @@
           </blockquote>
           <p>If nothing displays then nothing has been set by the user</p>
 
-        <h1 id="repo">Creating a remote repository</h1>
+        <div class="spacer" id="repo"><h1>&nbsp;</h1></div>  
+        <h1>Creating a remote repository</h1>
           <p>Okay so now you've installed gh, you've logged in to your GitHub account or your enterprise server, you've configured it, maybe you've even set up an alias or two. Great. What else is there to do?</p>
           <em>Let's actually use gh.</em> 
           <p>The reason we've installed gh in the firstplace is because it can do the things that git can't do. it can't interact with, manage, nor create pull requests, it can't work with gists, and most importantly, GIT CAN'T CREATE OR FORK A REPOSITORY ON YOUR ACCOUNT</p>
