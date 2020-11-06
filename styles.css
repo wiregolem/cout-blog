@@ -224,6 +224,10 @@ margin: none;
     margin-bottom: 2em;
     box-shadow: 1em 1em 1em 0em #999999;
   }
+  
+  .nav {
+    display:none;
+  }
 }
 
 
