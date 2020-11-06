@@ -2,6 +2,7 @@ body{
   font-family: Verdana, Geneva, sans-serif;
   background-color:#eeeeee;
   width: 100%;
+  min-height:100%;
   margin: 0;
 }
 
@@ -45,9 +46,17 @@ h4{
   margin-bottom:1em;
 }
 
+.flex-wrapper{
+  display:flex;
+  min-height:100vh;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
 .content{
  padding-top: 2em;
  color: #000000;
+
 }
 
 .spacer{
@@ -58,6 +67,7 @@ code{
   font-family: monospace;
   font-size: 1.1em;
   color: #ffffff;
+  background-color:#1d1d1d;
 }
 
 blockquote{    
@@ -90,12 +100,7 @@ blockquote{
   box-shadow: 1em 1em 1em 0em #999999;
 }
 
-footer{
-  background-color:#1e1e1e;
-  margin-left:none;
-  color:#ffffff;
-  font-size:.75em;
-}
+
 
 a:link{
   text-decoration:none;
@@ -149,6 +154,14 @@ hr{
 
 .img404{
   align-self:center;
+}
+
+footer{
+  background-color:#1e1e1e;
+  margin-left:none;
+  color:#ffffff;
+  font-size:.75em;
+  width:100%;
 }
 
 .footFlex{
@@ -237,6 +250,8 @@ hr{
   }
 
 }
+
+
 
 
 
