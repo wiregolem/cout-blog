@@ -20,7 +20,7 @@ body{
   left: 0;
   right: 0;
   width: 100%;
-  box-shadow: 0em .01em .01em  0em #1e1e1e; 
+  box-shadow: 0em .5em 3em  0em #1e1e1e; 
   display: inline-block;
 }
 
