@@ -16,12 +16,8 @@ body{
   color: #ffffff;
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   width: 100%;
   box-shadow: 0em .5em 3em  0em #1e1e1e; 
-  display: inline-block;
 }
 
 .nav 
@@ -36,9 +32,15 @@ body{
 
 .nav a{
   padding-left:1em;
- 
-  
 }
+
+.navmenu{
+display:none;
+
+}
+
+
+
 
 h1,h4,h2,h6{
   margin:0;
@@ -228,6 +230,17 @@ margin: none;
   .nav {
     display:none;
   }
+  
+  .navmenu {
+    display:inline;
+    float:right;
+
+
+  }
+  .navmenu img{
+    max-width:37px;
+  }
+
 }
 
 
