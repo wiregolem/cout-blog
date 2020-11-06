@@ -1,10 +1,16 @@
 body{
-  font-family: Helvetica;
+  font-family: Verdana, Geneva, sans-serif;
   background-color:#eeeeee;
   width: 100%;
   margin: 0;
 }
 
+.logo{
+  width:12em;
+  margin-left:1em;
+  margin-top:.5em;
+  margin-bottom:.5em;
+}
 .header {
   background-color:#1e1e1e;
   color: #ffffff;
@@ -13,14 +19,26 @@ body{
   top: 0;
   left: 0;
   right: 0;
-  margin-left:0px;
   width: 100%;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  padding-top: .6em;
   box-shadow: 0em .01em .01em  0em #1e1e1e; 
+  display: inline-block;
 }
 
+.nav 
+{
+  float:right;
+  float:clear;
+  margin-right:1em;
+  margin-top:.5em;
+  margin-bottom:.5em;
+   vertical-align:middle;
+}
+
+.nav a{
+  padding-left:1em;
+ 
+  
+}
 
 h1,h4,h2,h6{
   margin:0;
@@ -40,7 +58,6 @@ margin:2em;
 }
 
 code{
-
   font-family: monospace;
   font-size: 1.1em;
   color: #ffffff;
