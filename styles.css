@@ -23,7 +23,6 @@ body{
 .nav 
 {
   float:right;
-  float:clear;
   margin-right:1em;
   margin-top:.5em;
   margin-bottom:.5em;
@@ -35,12 +34,8 @@ body{
 }
 
 .navmenu{
-display:none;
-
+  display:none;
 }
-
-
-
 
 h1,h4,h2,h6{
   margin:0;
@@ -65,10 +60,8 @@ code{
   color: #ffffff;
 }
 
-blockquote{
-    
-background-color: #1d1d1d;
-    
+blockquote{    
+  background-color: #1d1d1d;    
 }
 
 .excerpt {
@@ -189,9 +182,9 @@ hr{
 }
 
 .license{
-text-align:center;
-padding-bottom: 1em;
-margin: none;
+  text-align:center;
+  padding-bottom: 1em;
+  margin: none;
 }
 
 
@@ -234,11 +227,13 @@ margin: none;
   .navmenu {
     display:inline;
     float:right;
-
-
+    clear:right;
   }
+  
   .navmenu img{
-    max-width:37px;
+    width:1.25em;
+    margin-right:1em;
+    margin-top:.7em;
   }
 
 }
