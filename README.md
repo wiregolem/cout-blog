@@ -5,17 +5,17 @@
 Website for cout.blog
 
 ## Todo:
-- Add link to ko.fi like website for tea
-- Add About page
-- Add Links page
-- Add Contact page
-- Add Archive page
-- Create dropdown nav menu for mobile
-- "Push down" footer on pages of short length such as notfound.html
-- Setup and link rss
-- Set up newsletter and subscription link
-- Add Git tutorial
-- Add more articles/tutorials
+- [ ] Add link to ko.fi like website for tea
+- [ ] Add About page
+- [ ] Add Links page
+- [ ] Add Contact page
+- [ ] Add Archive page
+- [x] Create dropdown nav menu for mobile
+- [x] "Push down" footer on pages of short length such as notfound.html
+- [ ] Setup and link rss
+- [ ] Set up newsletter and subscription link
+- [ ] Add Git tutorial
+- [ ] Add more articles/tutorials
 
 # License
 - Regarding Content (Sourcecode, Text, Images, Video, Audio, and other media)
