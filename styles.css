@@ -30,6 +30,7 @@ body{
   color: #ffffff;
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  top: 0;
   height:2em;
   width: 100%;
   box-shadow: 0em .5em 3em  0em #1e1e1e; 
@@ -56,6 +57,10 @@ body{
 
 .nav a:hover{
   background-color:#8C75D4;
+}
+
+.nav a:visited{
+  color:#ffffff;
 }
 
 .navmenu{
@@ -96,9 +101,11 @@ body{
 
 .item li:hover{
   background-color:#8C75D4;
-    
 }
 
+.item a:visited{
+  color:#ffffff;
+}
 
 
 h1,h4,h2,h6{
@@ -181,7 +188,10 @@ a.contbutton{
 
 a.contbutton:hover{
   background-color:#8C75D4;
-  
+}
+
+a.contbutton:visited{
+  color:#ffffff;    
 }
 
 .continue{
