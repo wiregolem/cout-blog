@@ -6,7 +6,8 @@ Website for cout.blog
 
 ## Todo:
 - [ ] Add link to ko.fi like website for tea
-- [ ] Add About page
+- [x] Add About page
+- [ ] Replace About page placeholders by writing a CSS Flexbox layout
 - [ ] Add Links page
 - [ ] Add Contact page
 - [ ] Add Archive page
@@ -16,6 +17,7 @@ Website for cout.blog
 - [ ] Set up newsletter and subscription link
 - [ ] Add Git tutorial
 - [ ] Add more articles/tutorials
+
 
 # License
 - Regarding Content (Sourcecode, Text, Images, Video, Audio, and other media)
