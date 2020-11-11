@@ -273,8 +273,40 @@ footer{
   margin: none;
 }
 
+/*About page layout*/
+
+.about{
+  
+}
+
+.about-bio{
+  
+}
+
+.about-proficiencies{
+  
+}
+
+.proficiency{
+    margin:.5em;
+    max-height:8em;
+}
+
+.about-networkLinks{
+  
+}
+
+.about-project{
+  
+}
 
 
+
+
+
+
+
+/*Mobile layout*/
 
 @media (max-width: 800px) {
   .flex404{
