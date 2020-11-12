@@ -284,12 +284,22 @@ footer{
 }
 
 .about-proficiencies{
-  
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 
+.center{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin:2em;
+}
+
+
 .proficiency{
-    margin:.5em;
-    max-height:8em;
+    max-width:5em;
+    max-height:3em;
 }
 
 .about-networkLinks{
