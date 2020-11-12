@@ -53,21 +53,31 @@
         
         <div class="about_proficiencies">
           <h2 style="text-align:center;">Proficiencies</h2>
-          <hr>
-          <p style="text-align:center;"> Todo: CSS flexbox containing proficiency icons and links<br> 5 4 5 items/line to 2 3 2 3 2 2 mobile</p>
+          <hr style="max-width:45%;">
+          <div class="center">
           <img src="images/ISO_C++_Logo.svg" alt="C/C++" class="proficiency">
           <img src="images/Python-logo-notext.svg" alt="Python" class="proficiency">
           <img src="images/Postgresql_elephant.svg" alt="PostgreSQL" class="proficiency">
           <img src="images/Duke_Java_mascot_waving.svg" alt="Java" class="proficiency">
+          </div>
+          
+          <div class="center">
+          <img src="images/JavaScript.svg" alt="JavaScript" class="proficiency">
           <img src="images/html5-wordmark.svg" alt="HTML5" class="proficiency">
           <img src="images/css3-wordmark.svg" alt="CSS3" class="proficiency">
-          <img src="images/JavaScript.svg" alt="JavaScript" class="proficiency">
+          </div>
+          
+          <div class="center">
           <img src="images/bash.svg" alt="Bash" class="proficiency">
+          <img src="images/Docker.svg" alt="Docker" class="proficiency">
+          <img src="images/Kubernetes.svg" alt="Kubernetes" class="proficiency">
+          </div>
+          
+          <div class="center">
           <img src="images/Tux.svg" alt="Linux" class="proficiency">
           <img src="images/Windows_logo.svg" alt="Windows" class="proficiency">
           <img src="images/Apple_Computer_Logo_rainbow.svg" alt="Mac" class="proficiency">
-          <img src="images/Docker.svg" alt="Docker" class="proficiency">
-          <img src="images/Kubernetes.svg" alt="Kubernetes" class="proficiency">
+          </div>
           
           
         </div>
@@ -82,7 +92,7 @@
         
         <div class ="about-project">
           <h2 style="text-align:center;">Current Project</h2>
-          <hr>
+          <hr style="max-width:45%;"><br>
           <p style="text-align:center;">[Stump Bug Tracker Image Here]</p>
           <p> Stump is a cross platform bug tracker application. The server is written in c++ and uses the Boost Asio library for asynchronious network communication over TCP/IP. The server handles and parses client input to commit and retrieve data from a PostgreSQL relational database using the libpq++ library. The database is formatted to allow for user authentication, project manager/user/group permissions as well as assignments, time stamp retrieval and sorting, user and group issue assignments, issue action deadlines, status modifiers, and user and project manager comments, behavioral and issue replication reporting, and issue retrieval via bug codenames for human memorability and ease of use.</p>
           <p>The server is accessed by either the Java GUI client, Python GUI client, in browser javascript web-client or the c++ client-cli.</p>
