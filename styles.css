@@ -275,7 +275,7 @@ footer{
 
 /*About page layout*/
 
-.about{
+.about-container{
   border:0px solid white;
   border-radius: 1em;
   background-color:#ffffff;
@@ -286,6 +286,12 @@ footer{
   max-width: 600px;
   margin-bottom: 2em;
   box-shadow: 1em 1em 1em 0em #999999;
+}
+
+.about-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .about-bio{
@@ -313,6 +319,7 @@ footer{
     display:flex;
     flex-direction:column;
     justify-content:space-around;
+    margin:1em;
 }
 
 .center{
@@ -330,7 +337,57 @@ footer{
 }
 
 .about-networkLinks{
-  
+    margin-top:5em;
+    margin-bottom:5em;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+.networkLink{
+  display:flex;
+  flex-direction:column;
+}
+
+.networkLink img{
+  display:block;
+  width:5em;
+  height:5em;
+  max-width:5em;
+  max-height:5em;
+  margin: 0;
+}
+
+.networkLink a{
+ margin:1em;
+}
+
+.networkLink b{
+  text-align:center;
+}
+
+.git-networkLink{
+  display:flex;
+  flex-direction:column;
+}
+
+.git-networkLink img{
+  width:5em;
+  height:5em;
+  max-width:5em;
+  max-height:5em;
+  margin: 0;
+  order:1;
+}
+
+
+.git-networkLink a{
+ margin:1em;
+}
+
+.git-networkLink b{
+  text-align:center;
+  order:2;
 }
 
 .about-project{
@@ -339,7 +396,7 @@ footer{
   
 }
 
-
+/*End of About Page Layout*/
 
 
 
@@ -389,6 +446,23 @@ footer{
     height:1em;
     padding:.5em;
   }
+  
+  .about-networkLinks{
+    margin-top:5em;
+    margin-bottom:5em;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.git-networkLink a{
+ order:2;
+}
+
+.git-networkLink b{
+  order:1;
+}
 
 }
 
