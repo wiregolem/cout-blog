@@ -7,7 +7,7 @@ Website for cout.blog
 ## Todo:
 - [ ] Add link to ko.fi like website for tea
 - [x] Add About page
-- [ ] Replace About page placeholders by writing a CSS Flexbox layout
+- [x] Replace About page placeholders by writing a CSS Flexbox layout
 - [ ] Add Links page
 - [ ] Add Contact page
 - [ ] Add Archive page
