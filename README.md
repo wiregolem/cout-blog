@@ -8,7 +8,7 @@ Website for cout.blog
 - [ ] Add link to ko.fi like website for tea
 - [x] Add About page
 - [x] Replace About page placeholders by writing a CSS Flexbox layout
-- [ ] Add Links page
+- [x] Add Links page
 - [ ] Add Contact page
 - [ ] Add Archive page
 - [x] Create dropdown nav menu for mobile
