@@ -9,8 +9,8 @@ Website for cout.blog
 - [x] Add About page
 - [x] Replace About page placeholders by writing a CSS Flexbox layout
 - [x] Add Links page
-- [ ] Add Contact page
-- [ ] Add Archive page
+- [x] Add Contact page
+- [x] Add Archive page
 - [x] Create dropdown nav menu for mobile
 - [x] "Push down" footer on pages of short length such as notfound.html
 - [ ] Setup and link rss
