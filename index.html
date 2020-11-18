@@ -13,7 +13,7 @@
   </head>
   
 
-  <body>
+  <body onload="phantomUser()">
     <!-- Header -->
     <div class="header">
     <div class="logo">
@@ -43,51 +43,40 @@
     <div class="content">
 
       <!-- Article Excerpt -->
-      <div class="excerpt">
-        <!-- Title -->
-	<h1>Using gh</h1>
-        <!-- Subtitle -->
-        <h4>GitHub's new command line interface</h4>
-        <!-- Icon -->
-        <!-- Tags -->
-        <h6>Command line tools &nbsp;&nbsp;&nbsp;&nbsp;Tutorial</h6>
-        <!-- Excerpt -->
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;The GitHub CLI, invoked with <code>$ gh</code> is the official command line interface of the popular code repository website, GitHub, making it possible to create repositories and even search available issues without a web browser! Before the release of the offical CLI many avid coders used the open-source, community developed, hub command. As the syntax is similar, switching to gh for those already familiar with the hub command should be simple. This article, however, assumes no such familiarity. Let's address the basics: Installation, authenticating, configuration, and creating a remote repository. ...
-        </p>   
-        <!-- Continue reading link -->
-        <div class="continue">
-          <a href="using-gh.html" class="contbutton">Continue reading</a>
-        </div>
+      <div class="excerpt" style="background-color:#1d1d1d;">
+          
+        
+        
+        <code id="intro" ><span style="color:#99ff99;">kevin@cout</span>:<span style="color:#9999ff;">/</span>$&nbsp;</code>
+        <br>
+        <code id="prompt" style="display:none;"><span style="color:#99ff99;">kevin@cout</span>:<span style="color:#9999ff;">/</span>$&nbsp;&#9608;</code>
+
+        <script>
+          var i = 0;
+          var txt = "Cout, a programmer's output to the world. A blog about software engineering, linux, and the command line. Here you will find tutorials on the topic of, and tools required for, software development, a few generally nerdy things about computers, and most definitely some really cool command line tools for Linux.";
+          var speed = 50;
+
+          function phantomUser() {
+            if (i < txt.length) {
+              document.getElementById("intro").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(phantomUser, speed);
+            }
+            if (i >= txt.length){
+              i=txt.length;
+              document.getElementById("prompt").style.display = "block";
+              }
+          }
+        </script>
+    
+    
+    
+    
+    
       </div>
       <!-- End of Article Excerpt -->
       
-      <!-- Article Excerpt -->
-      <div class="excerpt">
-        <!-- Title -->
-        <h1>Version Control</h1>
-        <!-- Subtitle -->
-        <h4>A primer on git for the unitiated</h4>
-        <!-- Tags -->
-        <h6>Command Line Tools</h6>   
-        <!-- Excerpt -->
-        <p>  &nbsp;&nbsp;&nbsp;&nbsp;Wouldn't it be great if while you were coding you could save and keep track of snapshots of the changes you made,
-        enabling you to revert to old versions of your software? Before you added that feature? Before you created that disasterous
-        bug? Thats version control. Like the undo function of your favorite text editor, or keeping seperate save files in a 
-        videogame. Of course you could save a copy of your code every time you make a change, and document the changes, and keep an
-        indexible list of the changes and the differences between each revision, and then manually sift through those files until
-        you find the version of the... </p>
-        <em>Or you could use Git.<em>
-        </br>
-        <p style="text-indent: 1.5em"> Git does all of that and much much more so you can avoid the painstaking tedium of doing it all manually. 
-        Let's go over how to set it up and use it's powerful features. ...</p>  
-        <!-- Continue reading link -->
-        <div class="continue">
-          <a href="#"class="contbutton">Continue reading</a>
-        </div>
-        <!-- End of Continue reading link -->
-      </div>
-      <!-- End of Article Excerpt -->
-
+      
     </div>
     <!-- End of Content -->
     
